@@ -55,7 +55,7 @@ A short explanation of the features of wgan_base:
   
   num_estims: number of runs of the OT estimate to then compute the standard deviation
  
- - cWGANTrainer method: generate_images(y, num_outputs = 64): generate num_outputs images given y
+ - cWGANTrainer method: generate_images(y, num_outputs = 64): generate num_outputs samples given y
 
 
 
