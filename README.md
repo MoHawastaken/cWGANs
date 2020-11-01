@@ -1,6 +1,6 @@
 # cWGANs
 
-Note that this code is not yet cleaned up. This will be done in the next days...
+Note that this code is not yet cleaned up!
 
 We use Pytorch models.
 A short explanation of the features of wgan_base:
@@ -51,3 +51,7 @@ A short explanation of the features of wgan_base:
   num_estims: number of runs of the OT estimate to then compute the standard deviation
  
  - cWGANTrainer method: generate_images(y, num_outputs = 64): generate num_outputs images given y
+
+
+
+- similar for classes WGAN and WGANTrainer. WGANTrainer supports more GAN variants and exclusive discriminator training...
