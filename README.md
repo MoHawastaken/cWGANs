@@ -7,6 +7,7 @@ We will document the used code in this repository.
 
 Note that this code is not yet cleaned up!
 
+Based on https://github.com/shayneobrien/generative-models and using POT https://pythonot.github.io/
 We use Pytorch models.
 A short explanation of the features of wgan_base:
 
