@@ -1,5 +1,10 @@
 # cWGANs
 
+This is a paper in progress. I recommend to stop by in a few days...
+
+
+We will document the used code in this repository.
+
 Note that this code is not yet cleaned up!
 
 We use Pytorch models.
