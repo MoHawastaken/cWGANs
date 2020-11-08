@@ -20,7 +20,10 @@ How to use cwgans.py:
   If shuffle =FALSE: training data = data\[:int(np.ceil(num_samples\*tt_split),:\], test data = data\[int(np.ceil(num_samples\*tt_split):,:\]
 
 
-- class WGAN(nn.Module), class cWGAN(nn.Module): contains a generator .G and a critic/discriminator .D
+- class WGAN(nn.Module), class cWGAN(nn.Module):
+  
+  Contains a generator .G and a critic/discriminator .D
+  
   Initialize  with the desired width of the generator pg=(z_dim+y_dim, pg_1, pg_2, ..., pg_L, x_dim) and the desired width of the discriminator pd=(x_dim+y_dim, pd_1, ..., pd_Ld, 1).
 
 - class cWGANTrainer: initialize with  (model, trains, testset = None, gantype = 'wgangp', noise = 'normal'):
