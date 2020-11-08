@@ -4,10 +4,11 @@ This is a paper in progress. I recommend to stop by in a few days...
 
 
 cwgans.py implements the (conditional) Wasserstein GAN trainer.
+temp-all-to-one.ipynb and c-smoothlearning.ipynb have been run with an old version of cwgans.
 
+## Basic features of cwgans.py
 Based on https://github.com/shayneobrien/generative-models and using POT https://pythonot.github.io/
 We use Pytorch models.
-How to use cwgans.py:
 
 - get_cdataloader(data, y, BATCH_SIZE=64, tt_split = 1, shuffle = True):
 
