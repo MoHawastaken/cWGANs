@@ -3,32 +3,31 @@
 This is a paper in progress. I recommend to stop by in a few days...
 
 
-We will document the used code in this repository.
-
-Note that this code is not yet cleaned up!
+cwgans.py implements the (conditional) Wasserstein GAN trainer.
 
 Based on https://github.com/shayneobrien/generative-models and using POT https://pythonot.github.io/
 We use Pytorch models.
-A short explanation of the features of wgan_base:
+How to use cwgans.py:
 
 - get_cdataloader(data, y, BATCH_SIZE=64, tt_split = 1, shuffle = True):
 
-  data: the data points X (in the paper), should have shape (num_samples, d)
+  data: the data points X (in the paper)
   
   y: the to data corresponding conditional values, should have shape (num_samples, d_Y)
   
   tt_split: proportion of training to test data in data.
   
-  If shuffle =FALSE, training data = data\[:int(np.ceil(num_samples\*tt_split),:\], test data = data\[int(np.ceil(num_samples\*tt_split):,:\]
+  If shuffle =FALSE: training data = data\[:int(np.ceil(num_samples\*tt_split),:\], test data = data\[int(np.ceil(num_samples\*tt_split):,:\]
 
 
 - class WGAN(nn.Module), class cWGAN(nn.Module): contains a generator .G and a critic/discriminator .D
+  Initialize  with the desired width of the generator pg=(z_dim+y_dim, pg_1, pg_2, ..., pg_L, x_dim) and the desired width of the discriminator pd=(x_dim+y_dim, pd_1, ..., pd_Ld, 1).
 
 - class cWGANTrainer: initialize with  (model, trains, testset = None, gantype = 'wgangp', noise = 'normal'):
 
   model: A Pytorch-trainable wrapper class containing networks .G and .D
   
-  trains: Training dataloader
+  trainset: Training dataloader
   
   testset: Testset dataloader
   
@@ -56,8 +55,9 @@ A short explanation of the features of wgan_base:
   
   num_estims: number of runs of the OT estimate to then compute the standard deviation
  
- - cWGANTrainer method: generate_images(y, num_outputs = 64): generate num_outputs samples given y
+ - cWGANTrainer method: generate_samples(y, num_outputs = 64): generate num_outputs samples given y
 
 
+Similar for classes WGAN and WGANTrainer. WGANTrainer supports more GAN variants and exclusive discriminator training. This is easily adaptable to the conditional case.
 
-- similar for classes WGAN and WGANTrainer. WGANTrainer supports more GAN variants and exclusive discriminator training...
+Feel free to contact me if you have questions, want to extend the functionality or clean this repo.
