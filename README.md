@@ -1,6 +1,7 @@
 # cWGANs
 
-This is a paper in progress. I recommend to stop by in a few days...
+This repository belongs to the submitted paper "Statistical analysis of Wasserstein GANs with applications to time series forecasting".
+https://arxiv.org/abs/2011.03074
 
 
 cwgans.py implements the (conditional) Wasserstein GAN trainer.
